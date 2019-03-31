@@ -52,12 +52,13 @@
             <a href="http://shutterstock.com/g/Chirag-Photographer" target="_blank"><svg><use xlink:href="#shutterstock" title="Behance" /></svg>Shutterstock</a>
           </div>
           <h2 class="topspace">Wanna Say Something?</h2>
-          <form class="contact-form" action="" method="POST" enctype="multipart/form-data">
-            <input id="name" name="name" type="text" value="" placeholder="Name:" required/>
+          <form id="contactform" action="https://formsubmit.io/send/5f8d4812-eb10-4d73-a02c-03ae9a9f2403" method="POST" class="contact-form" enctype="multipart/form-data">
+            <input id="name" name="name" type="text" value="" placeholder="Name" required/>
             <br>
-            <input id="email" name="email" type="text" value="" placeholder="Email:" required/>
+            <input id="email" name="email" type="email" value="" placeholder="Email" required/>
             <br>
-            <textarea name="message" class="textarea" id="message" rows="8" placeholder="Message:" required></textarea>
+            <textarea name="comment" id="comment" rows="3" class="textarea" placeholder="Message" required></textarea>
+            <input name="_formsubmit_id" type="text" style="display:none">
             <br>
             <input class="send-button" type="submit" value="Send" />
           </form>
