@@ -94,7 +94,8 @@ img { vertical-align: top; max-width: 100%; height: auto; }
 .pgtitle:after { content: ''; position: absolute; background-color: #01b5be; height: 3px; width: 50px; left: 0; bottom: 0;}
 
 .what-i-do > div { width: 25%; position: relative; }
-.what-i-do svg, .contact-info svg { width: 70px; height: 70px; fill: #01b5be; display: block; margin: 10px auto; }
+.what-i-do svg, .contact-info svg, .thankyou svg { width: 70px; height: 70px; fill: #01b5be; display: block; margin: 10px auto; }
+.thankyou svg {display: inline-block;}
 .what-i-do strong {font-size: 1.2em;}
 .editor .skills h4 { width: 16.66%;}
 .skills span {display: block; color: #01b5be; margin-bottom: 10px;}
