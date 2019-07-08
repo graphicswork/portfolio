@@ -72,16 +72,40 @@ svg:not(:root) { overflow: hidden; }
 .editor .sec-header h2 { margin-top: 0; margin-bottom: 0; padding-bottom: 15px; font-weight: 700;}
 .sec-header span{font-weight: 600; padding-bottom: 3px; display: block;}
 
-.services article { width: 30.33%; position: relative; margin: 20px 0; }
-.services article .icon{ color: var(--darkgray); display: inline-block; margin-bottom: 20px; width: 80px; height: 80px; line-height: 78px; font-size: 30px; border: 1px solid #e3e3e3; -webkit-border-radius: 50%; border-radius: 50%; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
+.header {padding-top:20px; position: absolute; position: absolute; width: 100%; top: 0; z-index: 999; padding-bottom: 20px; -webkit-transition: all .5s ease; -o-transition: all .5s ease;  transition: all .5s ease;}
 
-.portfolio article{width: 23%; position: relative; overflow: hidden;}
+.services article { width: 30.33%; position: relative; margin: 20px 0; }
+.services article .icon{ color: var(--darkgray); display: inline-block; margin-bottom: 20px; width: 80px; height: 80px; line-height: 78px; font-size: 35px; border: 1px solid var(--darkgray); -webkit-border-radius: 50%; border-radius: 50%; -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
+
+.portfolio article{ width: 23%; position: relative; overflow: hidden; margin-bottom: 30px;}
+.portfolio article:after{ content: ""; position: absolute; top: 10px; right: 10px; bottom: 10px; left: 10px; background-color: rgba(255, 255, 255, 0.9); opacity: 0; -webkit-transform: scale(0.8); -ms-transform: scale(0.8); transform: scale(0.8); -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
+.portfolio article:hover:after { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); opacity: 1; }
+.portfolio article .more {position: absolute; width: 100%; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); text-align: center; opacity: 0; z-index: 3; -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;  transition: .5s all ease;}
+.portfolio article:hover .more {opacity: 1;}
+.editor .portfolio article:hover .more a{font-size: 1.7em; color: var(--darkgray);}
+
+.portfolio > article{ display:none; 
+}
+#loadMore {
+color:green;
+cursor:pointer;
+}
+#loadMore:hover {
+color:black;
+}
+#showLess {
+color:red;
+cursor:pointer;
+display:none;
+}
+#showLess:hover {
+color:black;
+}
 
 .navi .logo { font-size: 1.8em; text-transform: capitalize; letter-spacing: 1px; color: white; font-weight: 700;}
 
 /*~~~~~~~~~ Navigation ~~~~~~~~~~~*/
-.navi { position: absolute; width: 100%; top: 0; z-index: 999; padding-top: 30px; padding-bottom: 20px; -webkit-transition: all .5s ease; -o-transition: all .5s ease;  transition: all .5s ease; }
-/* Navigation */
 .menu, .menu > li {display: -ms-flexbox; display: -webkit-flex; display: flex;}
 .menu.topmenu {top: -40px; right: 0; position: absolute;}  
 .menu > li {position:relative; padding:0 15px;}
@@ -120,7 +144,6 @@ svg:not(:root) { overflow: hidden; }
 .mobimenu #menu-trigger span:after { -webkit-transform: translateY(0) rotate(-45deg); transform: translateY(0) rotate(-45deg); top:0; left:0;}
 
 
-
 .editor h1 { font-size: 2em; line-height: 1em; margin-bottom: 20px; }
 .editor h2 { font-size: 1.7em; margin: 15px 0; }
 .editor h3 { font-size: 1.5em; margin: 15px 0; }
@@ -137,8 +160,8 @@ svg:not(:root) { overflow: hidden; }
 .editor hr { clear: both; font-size: 1px; line-height: 1px; height: 1px; margin: 30px 0; border: 0px; border-top: 2px solid #e9e8f7; }
 .twocolumn {-moz-column-count:2; -webkit-column-count:2; column-count:2;}
 
-.editor .btn a, .btn a{position: relative; padding: 5px 16px 5px; background-color: transparent; color: var(--darkgray); display: inline-block; font-weight:600; margin-top: 10px; text-transform: uppercase; border: 2px solid #656565; border-radius: 5px; text-decoration:none;}
-.editor .btn a:hover, .btn a:hover{background-color:#656565; border-color: var(--darkgray); color: #fff;}
+.editor .btn a, .btn a{position: relative; padding: 5px 16px 5px; background-color: transparent; color: var(--darkgray); display: inline-block; font-weight:600; margin-top: 10px; text-transform: uppercase; border: 2px solid var(--darkgray); text-decoration:none;}
+.editor .btn a:hover, .btn a:hover{background-color:var(--darkgray); color: white;}
 
  .contact-form {position: relative; width: 100%;}
  .contact-form > div {margin-bottom: 20px;}
@@ -147,14 +170,13 @@ form { width: 100%; }
 form input,
 form textarea,
 form button { font-weight: normal;  }
-input[type="text"], input[type="email"], .textarea { font-family: inherit; color: var(--darkgray); border: 0; border-bottom: 2px solid var(--darkgray); width: 100%; padding: 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; outline: 0;  resize: none;
--webkit-transition: .3s all ease; -moz-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; }
+input[type="text"], input[type="email"], .textarea { font-family: inherit; color: var(--darkgray); border: 0;  background: transparent; border-bottom: 2px solid var(--darkgray); width: 100%; padding: 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; outline: 0;  resize: none; -webkit-transition: .3s all ease; -moz-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; }
 
 input[type="text"]:focus, input[type="email"]:focus, .textarea:focus { border-color: var(--blue); }
 
-.send-button { color:white; font-family: inherit; margin: 4px 0; padding: 10px;   border-radius: 5px; background-color: #01b5be; font-size: 1.2em; text-transform: uppercase; font-weight: 600; border: solid 2px #01b5be; outline: 0; 
+.send-button { position: relative; padding:10px 15px; background-color: transparent; color: var(--darkgray); display: inline-block; font-weight:600; margin-top: 20px; cursor: pointer; border: 0; outline: 0; border: 2px solid var(--darkgray); text-transform: uppercase; 
 -webkit-transition: .3s all ease; -moz-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; }
-.send-button:hover, .send-button:active { background-color: #ffffff; color: #01b5be; }
+.send-button:hover, .send-button:active { background-color:var(--darkgray); color: white; }
 /*Form End*/
 
 

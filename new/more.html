@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Load More script</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" crossorigin="anonymous"></script>
+		<style type="text/css">
+			.portfolio > article{ display:none; 
+		}
+		#loadMore {
+		color:green;
+		cursor:pointer;
+		}
+		#loadMore:hover {
+		color:black;
+		}
+		#showLess {
+		color:red;
+		cursor:pointer;
+		display:none;
+		}
+		#showLess:hover {
+		color:black;
+		}
+		</style>
+		
+	</head>
+	<body>
+		<section class="portfolio">
+			<article>One</article>
+			<article>Two</article>
+			<article>Three</article>
+			<article>Four</article>
+			<article>Five</article>
+			<article>Six</article>
+			<article>Seven</article>
+			<article>Eight</article>
+			<article>Nine</article>
+			<article>Ten</article>
+			<article>Eleven</article>
+			<article>Twelve</article>
+			<article>Thirteen</article>
+			<article>Fourteen</article>
+			<article>Fifteen</article>
+			<article>Sixteen</article>
+			<article>Seventeen</article>
+			<article>Eighteen</article>
+			<article>Nineteen</article>
+			<article>Twenty one</article>
+			<article>Twenty two</article>
+			<article>Twenty three</article>
+			<article>Twenty four</article>
+			<article>Twenty five</article>
+		</section>
+		<div id="loadMore">Load more</div>
+		<div id="showLess">Show less</div>
+		<script type="text/javascript">
+			$(document).ready(function () {
+			    size_li = $(".portfolio > article").size();
+			    x=4;
+			    $('.portfolio > article:lt('+x+')').show();
+			    $('#loadMore').click(function () {
+			        x= (x+4 <= size_li) ? x+4 : size_li;
+			        $('.portfolio > article:lt('+x+')').show('slow');
+			         $('#showLess').show();
+			        if(x == size_li){
+			            $('#loadMore').hide();
+			        }
+			    });
+			    $('#showLess').click(function () {
+			        x=(x-4<0) ? 3 : x-4;
+			        $('.portfolio > article').not(':lt('+x+')').hide('slow');
+			        $('#loadMore').show();
+			         $('#showLess').show();
+			        if(x == 4){
+			            $('#showLess').hide();
+			        }
+			    });
+			});
+		</script>
+	</body>
+</html>
