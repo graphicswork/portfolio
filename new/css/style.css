@@ -84,11 +84,11 @@ svg:not(:root) { overflow: hidden; }
     -o-transition: .5s all ease;  transition: .5s all ease;}
 .portfolio article:hover .more {opacity: 1;}
 .editor .portfolio article:hover .more a{font-size: 1.7em; color: var(--darkgray);}
+.pbtns {margin: 0 auto;}
 
-#loadMore { color:green; cursor:pointer;}
-#loadMore:hover { color:black;}
-#showLess {color:red; cursor:pointer; display:none;}
-#showLess:hover { color:black;}
+#loadMore, #showLess { padding: 7px; margin: 0 5px; background-color: var(--darkgray); color: white; cursor:pointer; border: 2px solid transparent; -webkit-transition: .3s all ease; -moz-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease;}
+#loadMore:hover, #showLess:hover { color:var(--darkgray); background-color: white; border:2px solid var(--darkgray);}
+#showLess { display:none;}
 
 .navi .logo { font-size: 1.8em; text-transform: capitalize; letter-spacing: 1px; color: white; font-weight: 700;}
 
@@ -147,23 +147,21 @@ svg:not(:root) { overflow: hidden; }
 .editor hr { clear: both; font-size: 1px; line-height: 1px; height: 1px; margin: 30px 0; border: 0px; border-top: 2px solid #e9e8f7; }
 .twocolumn {-moz-column-count:2; -webkit-column-count:2; column-count:2;}
 
-.editor .btn a, .btn a{position: relative; padding: 5px 16px 5px; background-color: transparent; color: var(--darkgray); display: inline-block; font-weight:600; margin-top: 10px; text-transform: uppercase; border: 2px solid var(--darkgray); text-decoration:none;}
-.editor .btn a:hover, .btn a:hover{background-color:var(--darkgray); color: white;}
+.editor .btn a, .btn a{position: relative; padding: 5px 16px 5px; background-color: var(--darkgray); color:white; display: inline-block; font-weight:600; margin-top: 10px; text-transform: uppercase; border: 2px solid var(--darkgray); text-decoration:none;}
+.editor .btn a:hover, .btn a:hover{background-color:transparent; color:var(--darkgray);}
 
- .contact-form {position: relative; width: 100%;}
- .contact-form > div {margin-bottom: 20px;}
+.contact-form {position: relative; width: 100%;}
+.contact-form > div {margin-bottom: 20px;}
  /*Form Start*/
 form { width: 100%; }
 form input,
 form textarea,
 form button { font-weight: normal;  }
 input[type="text"], input[type="email"], .textarea { font-family: inherit; color: var(--darkgray); border: 0;  background: transparent; border-bottom: 2px solid var(--darkgray); width: 100%; padding: 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; outline: 0;  resize: none; -webkit-transition: .3s all ease; -moz-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; }
-
 input[type="text"]:focus, input[type="email"]:focus, .textarea:focus { border-color: var(--blue); }
-
-.send-button { position: relative; padding:10px 15px; background-color: transparent; color: var(--darkgray); display: inline-block; font-weight:600; margin-top: 20px; cursor: pointer; border: 0; outline: 0; border: 2px solid var(--darkgray); text-transform: uppercase; 
+.send-button { position: relative; padding:10px 15px; background-color: var(--darkgray); color: white; display: inline-block; font-weight:600; margin-top: 20px; cursor: pointer; border: 0; outline: 0; border: 2px solid var(--darkgray); text-transform: uppercase; 
 -webkit-transition: .3s all ease; -moz-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease; }
-.send-button:hover, .send-button:active { background-color:var(--darkgray); color: white; }
+.send-button:hover, .send-button:active { background-color:transparent; color:var(--darkgray); }
 /*Form End*/
 
 
