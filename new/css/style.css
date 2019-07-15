@@ -67,7 +67,7 @@ svg:not(:root) { overflow: hidden; }
 .header {padding-top:20px; position:fixed; width: 100%; z-index: 999; padding-bottom: 20px; -webkit-transition: all .5s ease; -o-transition: all .5s ease;  transition: all .5s ease;}
 .header .logo { font-size: 1.8em; text-transform: capitalize; letter-spacing: 1px; color: white; font-weight: 700;}
 
-.fixed.header { background-color:white; box-shadow: 0 0 6px rgba(0, 0, 0, .15); animation: slide-down .2s }
+.fixed.header { padding:10px 0; background-color:white; box-shadow: 0 0 6px rgba(0, 0, 0, .15); animation: slide-down .2s }
 .fixed.header .logo {color: var(--darkgray);}
 
 .banner .banner-text { position: absolute; z-index: 3; left: 0; right: 0; color: white; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
@@ -102,10 +102,11 @@ svg:not(:root) { overflow: hidden; }
 #viewall a {color: white; display: inline-block;}
 #viewall:hover a, #viewall a:hover {color: var(--darkgray);}
 
-.editor .scrollup { padding:5px 7px; color: white; position: fixed; bottom:30px; right:30px; background-color: var(--darkgray); z-index:11; cursor: pointer; font-size: .8em; text-transform: uppercase; font-weight: 700;}
+.editor .scrollup { padding:5px 7px; color: white; position: fixed; bottom:-60px; right:30px; background-color: var(--darkgray); z-index:11; cursor: pointer; font-size: .8em; text-transform: uppercase; font-weight: 700; opacity: 0; visibility: hidden; -webkit-transition: .3s all ease; -moz-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease;}
 .editor a:hover.scrollup {color: white}
+.editor .scrollup.up { bottom: 60px; opacity: 1; visibility: visible;}
 
-.footer {background-color: var(--darkgray); color:white; padding:30px 0;}
+.footer {background-color: var(--darkgray); color:white; padding:25px 0;}
 .footer .social-icons {margin-bottom: 20px;}
 .footer .social-icons a { width: 40px; height:40px; padding: 7px;}
 .footer .social-icons a:hover svg {fill:white;}

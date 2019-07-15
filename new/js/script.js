@@ -40,10 +40,10 @@ $(document).ready(function() {
 $(window).scroll(function() {
   if ($(window).scrollTop() >= 100) {
       $('.header').addClass('fixed');
-      $('.scrollup').fadeIn();
+      $('.scrollup').addClass('up');
   } else {
       $('.header').removeClass('fixed');
-      $('.scrollup').fadeOut();
+      $('.scrollup').removeClass('up');
   };
 });
 
@@ -68,5 +68,13 @@ $(window).resize(sizeContent);
 $(document).ready(function() {
  // mobiMenu();
   $('[data-fancybox]').fancybox();
-  $.scrollIt({upKey:38,downKey:40,easing:"swing",scrollTime:600,activeClass:"active",onPageChange:null,topOffset:-15});
+  $.scrollIt({
+    upKey:38,
+    downKey:40,
+    easing:"linear",
+    scrollTime:600,
+    activeClass:"active",
+    onPageChange:null,
+    topOffset:-54
+  });
 });
