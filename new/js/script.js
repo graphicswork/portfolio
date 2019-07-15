@@ -10,31 +10,6 @@ $(document).ready(function() {
       showCursor: true,
       strings: ["Designing Logo", "Creating Layouts"]
   });
-
-  $(".menu a ").click(function() {
-      $("html, body").animate({
-          scrollTop: $($(this).attr("href")).offset().top
-      }, 600);
-      return false;
-  });
-  /*  $('.testmonials').owlCarousel({
-      items:1,
-      loop:true,
-      margin:0,
-      nav:true,
-      autoplay:true,
-      smartSpeed:1000,
-      autoplayTimeout:9000,
-      responsive:{
-        0:{
-          items:1
-        },
-        768:{
-          items:2
-        }
-      }
-    }); */
-
   // for portfolio
   size_li = $(".portfolio > article").size();
   x = 4;
@@ -63,10 +38,12 @@ $(document).ready(function() {
 });
 
 $(window).scroll(function() {
-  if ($(window).scrollTop() >= 80) {
+  if ($(window).scrollTop() >= 100) {
       $('.header').addClass('fixed');
+      $('.scrollup').fadeIn();
   } else {
       $('.header').removeClass('fixed');
+      $('.scrollup').fadeOut();
   };
 });
 
@@ -87,22 +64,9 @@ function sizeContent() {
 };
 $(document).ready(sizeContent);
 $(window).resize(sizeContent);
-/*
-function mobiMenu() {
-  $(".mobimenu .menu > li").find("ul").parent("li").addClass("color");
-  $(".mobimenu .menu li.color > a").append('<span class="arrow"></span>');
-  $('.mobimenu .menu li.color > a .arrow').closest('li').removeClass("open");
-  $('.mobimenu .menu li.color > a .arrow').click(function(e) {
-      e.preventDefault();
-      $(this).closest('li').toggleClass("open").siblings().removeClass("open");
-      $(this).closest('.menu').siblings().find('li').removeClass("open");
-      $(this).closest('li').siblings().find('> ul').slideUp(300);
-      $(this).closest('.menu').siblings().find('li > ul').slideUp(300);
-      $(this).closest('li').find('> ul').slideToggle(300);
-  })
-}; */
+
 $(document).ready(function() {
  // mobiMenu();
   $('[data-fancybox]').fancybox();
-
+  $.scrollIt({upKey:38,downKey:40,easing:"swing",scrollTime:600,activeClass:"active",onPageChange:null,topOffset:-15});
 });
