@@ -75,7 +75,7 @@ svg:not(:root) { overflow: hidden; }
 .banner .banner-text p { font-size: 1.6em; color: var(--gray); line-height: 1.5em;}
 .banner .banner-text strong {font-weight: 700;}
 
-.about-wrap.editor .col23 header h2{ margin-bottom:5px; }
+.about-wrap.editor .col23 header h2{ margin-bottom:5px; font-weight: 700;}
 .about-wrap.editor .col23 header {margin-bottom:20px; }
 .about-wrap .myimg img {-webkit-box-shadow: 4px 4px 8px 0px rgba(51, 51, 51, 0.15); -moz-box-shadow: 4px 4px 8px 0px rgba(51, 51, 51, 0.15); box-shadow: 4px 4px 8px 0px rgba(51, 51, 51, 0.15); padding: 0 10px 10px 0;}
 
@@ -90,11 +90,11 @@ svg:not(:root) { overflow: hidden; }
 .portfolio article{ display:none; width: 23%; position: relative; overflow: hidden; margin-bottom: 30px;}
 .portfolio article:after{ content: ""; position: absolute; top: 10px; right: 10px; bottom: 10px; left: 10px; background-color: rgba(255, 255, 255, 0.9); opacity: 0; -webkit-transform: scale(0.8); -ms-transform: scale(0.8); transform: scale(0.8); -webkit-transition: .5s all ease; -o-transition: .5s all ease; transition: .5s all ease; }
 .portfolio article:hover:after { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); opacity: 1; }
-.portfolio article .more {position: absolute; width: 100%; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); text-align: center; opacity: 0; z-index: 3; -webkit-transition: .5s all ease;
-    -o-transition: .5s all ease;  transition: .5s all ease;}
+.portfolio article .more {position: absolute; width: 100%; top: 50%;  -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); text-align: center; opacity: 0; z-index: 3; -webkit-transition: .5s all ease; -o-transition: .5s all ease;  transition: .5s all ease;}
 .portfolio article:hover .more {opacity: 1;}
 .editor .portfolio article:hover .more a{font-size: 1.7em; color: var(--darkgray);}
 .pbtns {margin: 0 auto;}
+
 
 #loadMore, #showLess, #viewall { padding:5px 10px; text-transform: uppercase; font-size: .9em; margin: 0 5px; background-color: var(--darkgray); color: white; cursor:pointer; border: 2px solid transparent; -webkit-transition: .3s all ease; -moz-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease;}
 #loadMore:hover, #showLess:hover, #viewall:hover { color:var(--darkgray); background-color: white; border:2px solid var(--darkgray);}
@@ -102,7 +102,7 @@ svg:not(:root) { overflow: hidden; }
 #viewall a {color: white; display: inline-block;}
 #viewall:hover a, #viewall a:hover {color: var(--darkgray);}
 
-.editor .scrollup { padding:5px 7px; color: white; position: fixed; bottom:-60px; right:30px; background-color: var(--darkgray); z-index:11; cursor: pointer; font-size: .8em; text-transform: uppercase; font-weight: 700; opacity: 0; visibility: hidden; -webkit-transition: .3s all ease; -moz-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease;}
+.editor .scrollup { padding:5px 7px; color: white; border: 1px solid white; position: fixed; bottom:-60px; right:30px; background-color: var(--darkgray); z-index:11; cursor: pointer; font-size: .8em; text-transform: uppercase; font-weight: 700; opacity: 0; visibility: hidden; -webkit-transition: .3s all ease; -moz-transition: .3s all ease; -o-transition: .3s all ease; transition: .3s all ease;}
 .editor a:hover.scrollup {color: white}
 .editor .scrollup.up { bottom: 60px; opacity: 1; visibility: visible;}
 
